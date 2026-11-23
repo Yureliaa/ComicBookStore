@@ -7,6 +7,19 @@ export interface Order {
   customerId: number;
   comicIds: number[];
   status: OrderStatus;
-  date: string;
+  date: string; 
   total: number;
+}
+
+export type NewOrder = Omit<Order, 'id'>;
+
+export interface OrderCustomer {
+  id: number;
+  name: string;
+}
+
+export interface OrderComic {
+  id: number;
+  title: string;
+  price: number;
 }
