@@ -10,9 +10,10 @@ interface Props {
   orders: Order[];
   customers: NamedCustomer[];
   onStatusChange: (orderId: number, status: OrderStatus) => void;
+  onSelect: (orderId: number) => void;
 }
 
-export default function OrderList({ orders, customers, onStatusChange }: Props) {
+export default function OrderList({ orders, customers, onStatusChange, onSelect }: Props) {
   const customerName = (id: number) =>
     customers.find((c) => c.id === id)?.name ?? `Customer #${id}`;
 
@@ -35,7 +36,11 @@ export default function OrderList({ orders, customers, onStatusChange }: Props) 
           <tbody>
             {orders.map((o) => (
               <tr key={o.id}>
-                <td>{o.id}</td>
+                <td>
+                  <button type="button" onClick={() => onSelect(o.id)}>
+                    #{o.id}
+                  </button>
+                </td>
                 <td>{customerName(o.customerId)}</td>
                 <td>{o.date}</td>
                 <td>
