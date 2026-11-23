@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "title": "Batman: Year One",
+      "author": "Frank Miller",
+      "illustrator": "David Mazzucchelli",
+      "publisher": "DC Comics",
+      "year": 1987,
+      "genre": "Superhero",
+      "price": 19.99,
+      "stock": 10,
+      "isbn": "9781401207526",
+      "description": "The origin story of Batman."
+    },
+    {
+      "id": 2,
+      "title": "Watchmen",
+      "author": "Alan Moore",
+      "illustrator": "Dave Gibbons",
+      "publisher": "DC Comics",
+      "year": 1986,
+      "genre": "Superhero",
+      "price": 24.99,
+      "stock": 5,
+      "isbn": "9780930289232",
+      "description": "A classic graphic novel."
+    }
+  ]
